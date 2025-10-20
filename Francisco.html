@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Francisco</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <style>
+        /* Fondo general con estrellas animadas */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        /* Contenedor central con transparencia */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparente sobre fondo oscuro */
+            border-radius: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        a {
+            color: #0af;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1, h2 {
+            color: #ffccff;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        img {
+            margin-top: 10px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .video-gallery video {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        table {
+            margin-top: 40px;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        th, td {
+            border: 2px solid #fff;
+            padding: 10px;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Lluvia de estrellas */
+        .stars {
+            width: 2px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Capa de estrellas animadas -->
+<script>
+    const numStars = 100;
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('stars');
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.animationDuration = (Math.random() * 5 + 5) + "s";
+        star.style.opacity = Math.random();
+        star.style.width = "2px";
+        star.style.height = Math.random() * 3 + "px";
+        document.body.appendChild(star);
+    }
+</script>
+
+<!-- Contenido principal -->
+<div class="container">
+    <a href="Index.html">← Regresar a la página</a>
+
+    <header>
+        <h1>¿Quién soy?</h1>
+        <p>
+            Me presento: soy Alexis Francisco Ocampo Villagrana. <br>
+            Mi materia favorita es Software, ya que mi padre hace cosas similares. Desde pequeño se me ha dado muy bien la tecnología, y me gustaría ser un gran programador y crear juegos de calidad. <br>
+            <img src="https://wallpapers.com/images/featured-full/coche-4k-yduvczxgolxxu1nk.jpg" alt="Auto deportivo">
+        </p>
+    </header>
+
+    <section>
+        <h2>Más sobre mí</h2>
+        <p>
+            Soy un estudiante de tercer semestre en el CECyTEM Plantel La Paz. Aunque soy un poco flojo, cuando es necesario me esfuerzo y aprendo con facilidad. Me cuesta el inglés, pero disfruto de la música, leer, el anime, los videojuegos, los autos, la tecnología, dibujar y relajarme.
+        </p>
+    </section>
+
+    <section>
+        <h2>Mis gustos y disgustos</h2>
+        <table>
+            <tr>
+                <th>Mis cosas favoritas</th>
+                <th>Las cosas que no me gustan</th>
+            </tr>
+            <tr><td>Leer</td><td>Infidelidades</td></tr>
+            <tr><td>Dibujar</td><td>Reguetón</td></tr>
+            <tr><td>Escuchar música</td><td>Artistas vulgares como Daniflow</td></tr>
+            <tr><td>Videojuegos</td><td>Hipocresía</td></tr>
+            <tr><td>Autos</td><td>Falsos amigos</td></tr>
+            <tr><td>La lluvia</td><td>Chismes</td></tr>
+            <tr><td>La noche</td><td>Pelear</td></tr>
+            <tr><td>La luna y las estrellas</td><td>Gente que se cree superior</td></tr>
+            <tr><td>Anime</td><td>Personas que fingen para agradar</td></tr>
+            <tr><td>Hacer poemas</td><td>Los insectos</td></tr>
+        </table>
+    </section>
+</div>
+
+</body>
+</html>
